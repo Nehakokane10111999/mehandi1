@@ -1,0 +1,50 @@
+
+<style type="text/css">
+    body{
+        background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-11.jpg");
+        
+    }
+     h1
+        {
+            text-align: center;
+            font-size: 40px;
+            color: #214946;
+        }
+    
+</style>
+<body class="body"><p id="notice"><%= notice %></p>
+
+<h1 class="h1">Customer list</h1>
+<table cellspacing="20" cellpadding="5" bgcolor="#FFFFFF" width="500" border="3" align="center">
+  <thead>
+    <tr>
+      <th bgcolor="#FF00FF">Name</th>
+      <th bgcolor="#FF00FF">Mobile</th>
+      <th bgcolor="#FF00FF">Email</th>
+      <th bgcolor="#FF00FF">Address</th>
+      <th bgcolor="#FF00FF">Dob</th>
+      <th colspan="3" bgcolor="#FF00FF">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custs.each do |cust| %>
+      <tr>
+        <td bgcolor="#FFCC99"><%= cust.name %></td>
+        <td bgcolor="#FFCC99"><%= cust.mobile %></td>
+        <td bgcolor="#FFCC99"><%= cust.email %></td>
+        <td bgcolor="#FFCC99"><%= cust.address %></td>
+        <td bgcolor="#FFCC99"><%= cust.dob %></td>
+        <td bgcolor="#FFCC99"><%= link_to 'Show', cust %></td>
+        <td bgcolor="#FFCC99"><%= link_to 'Edit', edit_cust_path(cust) %></td>
+        <td bgcolor="#FFCC99"><%= link_to 'Destroy', cust, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<button><%= link_to 'New Cust', new_cust_path %></button>
+<button class="button"><%= link_to "Back ", controller: "sessions", action: 'welcome' %></button>
+

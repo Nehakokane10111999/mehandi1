@@ -1,0 +1,41 @@
+
+<style type="text/css">
+    body{
+        background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-11.jpg");
+        
+    }
+</style>
+<body class="body">
+  <%= form_with(model: feedback) do |form| %>
+  <% if feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+
+      <ul>
+        <% feedback.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table cellspacing="10" cellpadding="5" bgcolor="#FFFFFF" width="500" border="3" align="center">
+  <tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :name %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :name %></th>
+
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :Description %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :description %></th>
+  </div>
+</tr>
+<tr>
+  <th colspan="2" bgcolor="#800080"> <div class="actions">
+    <%= form.submit %>
+  </div>
+</th></tr></table>
+<% end %>

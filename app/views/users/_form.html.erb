@@ -1,0 +1,65 @@
+
+<style type="text/css">
+    body{
+        background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-11.jpg");
+        
+    }
+</style>
+<body class="body">
+  <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table cellspacing="10" cellpadding="5" bgcolor="#FFFFFF" width="500" border="3" align="center">
+  <tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :name %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :name %></th>
+  </div>
+</tr>
+  <tr>
+    <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :mobile %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :mobile %></th>
+  </div>
+</tr>
+  <tr>
+    <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :email %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :email %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :password %></th>
+    <th bgcolor="#FFCC99"><%= form.password_field :password %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :password_confirmation %></th>
+    <th bgcolor="#FFCC99"><%= form.password_field :password_confirmation %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :address %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :address %></th>
+  </div>
+</tr>
+<tr>
+  <th colspan="2" bgcolor="#800080"><div class="actions">
+    <%= form.submit %>
+<button><%= link_to "Back ", controller: "home", action: 'index', class: "back-link"  %></button></th>
+  </div>
+</tr>
+<% end %>

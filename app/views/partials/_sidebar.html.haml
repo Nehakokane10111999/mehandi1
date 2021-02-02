@@ -1,0 +1,21 @@
+.sidebar{"data-color" => "red", "data-image" => "/img/1.jpg"}
+  /
+    Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+    Tip 2: you can also add an image using data-image tag
+  .sidebar-wrapper
+    .logo
+      %a.simple-text{:href => "https://www.google.co.in/"}
+        Neha mehandi
+    %ul.nav
+      %li
+        = link_to home_url do
+          %i.pe-7s-study
+          %p Home
+      %li
+        = link_to about_url do
+          %i.pe-7s-users
+          %p about
+      %li
+        = link_to contact_url do
+          %i.pe-7s-note2
+          %p contact

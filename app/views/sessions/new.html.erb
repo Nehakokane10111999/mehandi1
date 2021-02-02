@@ -1,0 +1,32 @@
+
+<style type="text/css">
+    body{
+        background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-11.jpg");
+        
+    }
+</style>
+<h1 style=”color:#FF0000;text-align:center;”><b><i>Neha Mehandi Designer</i></b></h1> 
+
+  <h1 style=”text-align:center;color:#FF0000;”><b>Log in</b></h1>
+<br><br>
+<div class = "content">
+<%= form_tag sessions_path do |form| %>
+ <div class="form-inputs">
+   <table cellspacing="40" cellpadding="5" bgcolor="#FFFFFF" width="500" border="5" align="center">
+  <tr>
+   <th bgcolor="#FFCC99"><label>Email_id</label></th>
+   <th bgcolor="#FFCC99"><%= text_field_tag :email %></th>
+ </tr>
+   <tr>
+    <th bgcolor="#FFCC99"><label>Password</label></th>
+   <th bgcolor="#FFCC99"><%= password_field_tag :password %></th>
+ </tr>
+ <tr>
+   <th colspan="2"><button autofocus="autofocus"><%= submit_tag 'Login' %></button></th>
+ </tr>
+ </table>
+</div>
+<br><br>
+    <% end %></div>
+</div>
+</form>

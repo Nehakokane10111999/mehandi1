@@ -1,0 +1,25 @@
+
+<style type="text/css">
+    body{
+        background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-11.jpg");
+        
+    }
+</style>
+<body class="body">
+	<p id="notice"><%= notice %></p>
+
+<table cellspacing="10" cellpadding="5" bgcolor="#FFFFFF" width="500" border="3" align="center">
+  <tr>
+
+  <th bgcolor="#FF00FF"><strong>Name</strong></th>
+  <th bgcolor="#FFCC99"><%= @feedback.name %></th>
+</tr>
+
+<tr>
+  <th bgcolor="#FF00FF"><strong>Description</strong></th>
+  <th bgcolor="#FFCC99"><%= @feedback.description %></th>
+</tr>
+<tr>
+<th colspan="2"><%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
+</th></tr></table>

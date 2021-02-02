@@ -1,0 +1,59 @@
+
+<style type="text/css">
+    body{
+        background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-11.jpg");
+        
+    }
+</style>
+<body class="body">
+  <%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table cellspacing="10" cellpadding="5" bgcolor="#FFFFFF" width="500" border="3" align="center">
+  <tr>
+  
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :name %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :name %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :mobile_no %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :mobile_no %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :date %></th>
+    <th bgcolor="#FFCC99"><%= form.date_select :date %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :address %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :address %></th>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <th bgcolor="#FF00FF"><%= form.label :design_name %></th>
+    <th bgcolor="#FFCC99"><%= form.text_field :design_name %></th>
+  </div>
+</tr>
+<tr>
+<th colspan="2" bgcolor="#800080"> 
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</th></tr></table>
+<% end %>
